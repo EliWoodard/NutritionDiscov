@@ -1,35 +1,646 @@
-[Carrot(medium-size), 25, 0.2, 0, 42, 195, 6, 1.7, 3, 0.6, 0.5, 3, 0, 0, 0, 0, 5, 20, 0.3, 6, 0.2]
-[Sweet-potato(medium-size), 112, 0.2, 0, 68, 265, 26, 4, 5, 2, 16.7, 20, 0, 0.3, 2.6, 9, 18, 0.6, 18, 0.2]
-[Kale (1-cup), 33, 0.6, 0, 25, 299, 6, 1.3, 1.3, 2.2, 0.9, 80, 0, 0.6, 547, 0, 19, 95, 1.1, 19, 0.2]
-[Orange(medium-size), 62, 0.2, 0, 1, 237, 15, 3, 12, 1.2, 0.2, 70, 0, 0.2, 0.2, 0, 39, 52, 0.2, 15, 0.1]
-[Strawberries(1 cup), 49, 0.5, 0, 2, 233, 11, 3, 7, 1, 17, 89, 0, 0.6, 0.2, 40, 24, 0.4, 14, 0.2, 0.1]
-[Bell Peppers(1 medium-sized), 24, 0.2, 0, 2, 187, 5.5, 2, 3.9, 1, 372, 152, 0, 0.2, 0.2, 0, 0, 1, 17, 0.2, 0.1]
-[Salmon(3 oz.), 177, 11, 47, 50, 315, 0, 0, 0, 23, 59, 0.7, 1.9, 0, 2.5, 0, 9, 0.7, 26, 0.4]
-[Egg(1 large), 68, 4.5, 185, 70, 69, 0, 0.6, 6, 260, 0, 41, 0.5, 0, 0, 0.6, 25, 0.8, 6, 0.6]
-[Almonds(1 oz.), 163, 14, 0, 0, 207, 6, 3.5, 1, 6, 0, 0, 7.3, 0, 0, 3.5, 76, 1.0, 76, 0.9]
-[Spinach(1 cup), 7, 0.1, 0, 24, 167, 1, 0.7, 0.1, 1, 2813, 8.4, 0, 0.6, 145, 0, 15, 0.8, 24, 0.2]
-[Sunflower seeds(1 oz.), 164, 14, 0, 1, 226, 6.8, 2.6, 0.9, 5.5, 0, 1.4, 7.4, 0, 0, 20, 3.8, 19, 14, 0.5]
-[Broccoli(1 cup), 31, 0.3, 0, 30, 287, 6, 2.4, 1.5, 2.5, 567, 81.2, 0, 0.7, 92, 0, 43, 0.7, 19, 0.4]
-[Lentils(1 cup cooked), 230, 0.8, 0, 4, 731, 40, 15.6, 3.6, 18, 0, 3, 0, 0.2, 3.3, 0, 358, 6.6, 71, 2.5]
-[Avocado(1 medium), 240, 22, 0, 10, 689, 12.8, 10, 0.2, 3, 146, 15, 0, 2.7, 21, 0, 12, 0.6, 39, 0.7]
-[Asparagus(1 cup), 27, 0.2, 0, 2, 271, 5.2, 2.8, 2.5, 3, 905, 6.9, 41, 1.5, 55, 0, 32, 2.9, 17, 1.1]
-[Yogurt(1 cup), 150, 8, 32, 110, 380, 11, 0, 11, 8, 81, 1.4, 0, 0.1, 0, 1.4, 296, 0.1, 28, 1.7]
-[Cheese(1 oz. cheddar), 113, 9, 30, 180, 28, 0.4, 0, 0.4, 7, 284, 0, 0.3, 0.3, 2.3, 0, 204, 0.2, 8, 0.7]
-[Beef(3 oz. lean), 213, 8.6, 77, 55, 318, 0, 0, 0, 26, 0, 0, 0.7, 1.7, 2.3, 2.5, 4, 2.7, 20, 4.8]
-[Black beans(1 cup cooked), 227, 0.9, 0, 1, 611, 40.8, 15, 1.3, 15.2, 0, 0, 0, 0.4, 5, 0, 256, 3.6, 120, 1.9]
-[Bananas(1 medium), 105, 0.4, 0, 1, 422, 27, 3.1, 14.4, 1.3, 64, 10.3, 0, 0.1, 0.6, 0, 6, 0.3, 32, 0.2]
-[Potatoes(1 medium), 163, 0.2, 0, 13, 897, 37, 4.7, 1.7, 4.3, 0, 19.7, 0, 0.1, 3.4, 0, 50, 1.9, 48, 0.6]
-[Chickpeas(1 cup cooked), 269, 4.2, 0, 11, 474, 45, 12.5, 8, 14.5, 67, 2, 0, 0.6, 6.6, 0, 80, 4.7, 79, 2.5]
-[Cashews(1 oz.), 157, 12, 0, 5, 187, 9, 0.9, 1.7, 5.2, 0, 0.1, 0.9, 0.3, 9.8, 0, 10, 1.9, 81, 1.6]
-[Chicken thighs(3 oz. cooked), 209, 10.9, 94, 88, 238, 0, 0, 0, 26, 32, 0, 0.4, 0.3, 0, 0.3, 14, 1.3, 21, 1]
-[Oats(1 cup cooked), 154, 3.2, 0, 115, 163, 27.3, 4, 1.1, 6.5, 0, 0, 0, 0.4, 1.4, 0, 21, 2.1, 63, 1.7]
-[Quinoa(1 cup cooked), 222, 3.6, 0, 13, 318, 39, 5.2, 1.6, 8.1, 9, 0, 0, 2.8, 0, 0, 31, 2.8, 64, 1.3]
-[Blueberries(1 cup), 84, 0.5, 0, 1, 114, 21, 3.6, 15, 1.1, 80, 14.4, 0, 0.8, 28.6, 0, 9, 0.4, 9, 0.2]
-[Brussels sprouts(1 cup), 38, 0.3, 0, 28, 342, 8, 3.3, 1.9, 3, 664, 74.8, 0, 1.5, 156, 0, 37, 1.4, 20, 0.4]
+[Carrot (medium-size): {
+- Calories: 25,
+- Total Fat (g): 0.2,
+- Cholesterol (mg): 0,
+- Sodium (mg): 42,
+- Potassium (mg): 195,
+- Carbohydrate (g): 6,
+- Fiber (g): 1.7,
+- Sugar (g): 3,
+- Protein (g): 0.6,
+- Vitamin A (mg): 0.5,
+- Vitamin C (mg): 3,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (micrograms): 0,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 5,
+- Calcium (mg): 20,
+- Iron (mg): 0.3,
+- Magnesium (mg): 6,
+- Zinc (mg): 0.2
+}]
 
+[Sweet-potato(medium-size): {
+- Calories: 112,
+- Total Fat (g): 0.2,
+- Cholesterol (mg): 0,
+- Sodium (mg): 68,
+- Potassium (mg): 265,
+- Carbohydrate (g): 26,
+- Fiber (g): 4,
+- Sugar (g): 5,
+- Protein (g): 2,
+- Vitamin A (mg): 16.7,
+- Vitamin C (mg): 20,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0.3,
+- Vitamin K (micrograms): 2.6,
+- Vitamin B12 (mg): 9,
+- Folate (Vitamin B9) (micrograms): 18,
+- Calcium (mg): 0.6,
+- Iron (mg): 18,
+- Magnesium (mg): 0.6,
+- Zinc (mg): 0.2
+}]
 
+[Kale (1-cup): {
+- Calories: 33,
+- Total Fat (g): 0.6,
+- Cholesterol (mg): 0,
+- Sodium (mg): 25,
+- Potassium (mg): 299,
+- Carbohydrate (g): 6,
+- Fiber (g): 1.3,
+- Sugar (g): 1.3,
+- Protein (g): 2.2,
+- Vitamin A (mg): 0.9,
+- Vitamin C (mg): 80,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (micrograms): 547,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 19,
+- Calcium (mg): 95,
+- Iron (mg): 1.1,
+- Magnesium (mg): 19,
+- Zinc (mg): 0.2
+}]
 
+[Orange(medium-size): {
+- Calories: 62,
+- Total Fat (g): 0.2,
+- Cholesterol (mg): 0,
+- Sodium (mg): 1,
+- Potassium (mg): 237,
+- Carbohydrate (g): 15,
+- Fiber (g): 3,
+- Sugar (g): 12,
+- Protein (g): 1.2,
+- Vitamin A (mg): 0.2,
+- Vitamin C (mg): 70,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0.2,
+- Vitamin K (micrograms): 0.2,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0.2,
+- Calcium (mg): 39,
+- Iron (mg): 52,
+- Magnesium (mg): 0.2,
+- Zinc (mg): 15
+}]
 
+[Strawberries(1 cup): {
+- Calories: 49,
+- Total Fat (g): 0.5,
+- Cholesterol (mg): 0,
+- Sodium (mg): 2,
+- Potassium (mg): 233,
+- Carbohydrate (g): 11,
+- Fiber (g): 3,
+- Sugar (g): 7,
+- Protein (g): 1,
+- Vitamin A (mg): 17,
+- Vitamin C (mg): 89,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0.6,
+- Vitamin K (micrograms): 0.2,
+- Vitamin B12 (mg): 0.1,
+- Folate (Vitamin B9) (micrograms): 0.2,
+- Calcium (mg): 40,
+- Iron (mg): 24,
+- Magnesium (mg): 0.4,
+- Zinc (mg): 14
+}]
+
+[Bell Peppers(1 medium-sized): {
+- Calories: 24,
+- Total Fat (g): 0.2,
+- Cholesterol (mg): 0,
+- Sodium (mg): 2,
+- Potassium (mg): 187,
+- Carbohydrate (g): 5.5,
+- Fiber (g): 2,
+- Sugar (g): 3.9,
+- Protein (g): 1,
+- Vitamin A (mg): 372,
+- Vitamin C (mg): 152,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (micrograms): 0.2,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0.2,
+- Calcium (mg): 0,
+- Iron (mg): 1,
+- Magnesium (mg): 17,
+- Zinc (mg): 0.2
+}]
+
+[Salmon(3 oz.): {
+- Calories: 177,
+- Total Fat (g): 11,
+- Cholesterol (mg): 47,
+- Sodium (mg): 50,
+- Potassium (mg): 315,
+- Carbohydrate (g): 0,
+- Fiber (g): 0,
+- Sugar (g): 0,
+- Protein (g): 23,
+- Vitamin A (mg): 59,
+- Vitamin C (mg): 0.7,
+- Vitamin D (mg): 1.9,
+- Vitamin E (mg): 0,
+- Vitamin K (micrograms): 2.5,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0,
+- Calcium (mg): 9,
+- Iron (mg): 0.7,
+- Magnesium (mg): 26,
+- Zinc (mg): 0.4
+}]
+
+[Egg(1 large): {
+- Calories: 68,
+- Total Fat (g): 4.5,
+- Cholesterol (mg): 185,
+- Sodium (mg): 70,
+- Potassium (mg): 69,
+- Carbohydrate (g): 0,
+- Fiber (g): 0,
+- Sugar (g): 0.6,
+- Protein (g): 6,
+- Vitamin A (mg): 260,
+- Vitamin C (mg): 0,
+- Vitamin D (mg): 41,
+- Vitamin E (mg): 0.5,
+- Vitamin K (micrograms): 0,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0,
+- Calcium (mg): 25,
+- Iron (mg): 0.8,
+- Magnesium (mg): 6,
+- Zinc (mg): 0.6
+}]
+
+[Almonds(1 oz.): {
+- Calories: 163,
+- Total Fat (g): 14,
+- Cholesterol (mg): 0,
+- Sodium (mg): 0,
+- Potassium (mg): 207,
+- Carbohydrate (g): 6,
+- Fiber (g): 3.5,
+- Sugar (g): 1,
+- Protein (g): 6,
+- Vitamin A (mg): 0,
+- Vitamin C (mg): 0,
+- Vitamin D (mg): 7.3,
+- Vitamin E (mg): 0,
+- Vitamin K (micrograms): 0,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0,
+- Calcium (mg): 76,
+- Iron (mg): 1.0,
+- Magnesium (mg): 76,
+- Zinc (mg): 0.9
+}]
+
+[Spinach(1 cup): {
+- Calories: 7,
+- Total Fat (g): 0.1,
+- Cholesterol (mg): 0,
+- Sodium (mg): 24,
+- Potassium (mg): 167,
+- Carbohydrate (g): 1,
+- Fiber (g): 0.7,
+- Sugar (g): 0.1,
+- Protein (g): 1,
+- Vitamin A (mg): 2813,
+- Vitamin C (mg): 8.4,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0.6,
+- Vitamin K (micrograms): 145,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0.2,
+- Calcium (mg): 40,
+- Iron (mg): 24,
+- Magnesium (mg): 0.2,
+- Zinc (mg): 0.2
+}]
+
+[Sunflower seeds(1 oz.): {
+- Calories: 164,
+- Total Fat (g): 14,
+- Cholesterol (mg): 0,
+- Sodium (mg): 1,
+- Potassium (mg): 226,
+- Carbohydrate (g): 6.8,
+- Fiber (g): 2.6,
+- Sugar (g): 0.9,
+- Protein (g): 5.5,
+- Vitamin A (mg): 0,
+- Vitamin C (mg): 1.4,
+- Vitamin D (mg): 7.4,
+- Vitamin E (mg): 0,
+- Vitamin K (micrograms): 0,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0,
+- Calcium (mg): 20,
+- Iron (mg): 3.8,
+- Magnesium (mg): 19,
+- Zinc (mg): 14
+}]
+
+[Broccoli(1 cup): {
+- Calories: 31,
+- Total Fat (g): 0.3,
+- Cholesterol (mg): 0,
+- Sodium (mg): 30,
+- Potassium (mg): 287,
+- Carbohydrate (g): 6,
+- Fiber (g): 2.4,
+- Sugar (g): 1.5,
+- Protein (g): 2.5,
+- Vitamin A (mg): 567,
+- Vitamin C (mg): 81.2,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0.7,
+- Vitamin K (micrograms): 92,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0.2,
+- Calcium (mg): 43,
+- Iron (mg): 0.7,
+- Magnesium (mg): 19,
+- Zinc (mg): 0.4
+}]
+
+[Lentils(1 cup cooked): {
+- Calories: 230,
+- Total Fat (g): 0.8,
+- Cholesterol (mg): 0,
+- Sodium (mg): 4,
+- Potassium (mg): 731,
+- Carbohydrate (g): 40,
+- Fiber (g): 15.6,
+- Sugar (g): 3.6,
+- Protein (g): 18,
+- Vitamin A (mg): 0,
+- Vitamin C (mg): 3,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (micrograms): 0.2,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 3.3,
+- Calcium (mg): 0,
+- Iron (mg): 358,
+- Magnesium (mg): 6.6,
+- Zinc (mg): 71
+}]
+
+[Avocado(1 medium): {
+- Calories: 240,
+- Total Fat (g): 22,
+- Cholesterol (mg): 0,
+- Sodium (mg): 10,
+- Potassium (mg): 689,
+- Carbohydrate (g): 12.8,
+- Fiber (g): 10,
+- Sugar (g): 0.2,
+- Protein (g): 3,
+- Vitamin A (mg): 146,
+- Vitamin C (mg): 15,
+- Vitamin D (mg): 0,
+- Vitamin E (mg): 2.7,
+- Vitamin K (micrograms): 21,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0,
+- Calcium (mg): 12,
+- Iron (mg): 0.6,
+- Magnesium (mg): 39,
+- Zinc (mg): 0.7
+}]
+
+[Asparagus(1 cup): {
+- Calories: 27,
+- Total Fat (g): 0.2,
+- Cholesterol (mg): 0,
+- Sodium (mg): 2,
+- Potassium (mg): 271,
+- Carbohydrate (g): 5.2,
+- Fiber (g): 2.8,
+- Sugar (g): 2.5,
+- Protein (g): 3,
+- Vitamin A (mg): 905,
+- Vitamin C (mg): 6.9,
+- Vitamin D (mg): 41,
+- Vitamin E (mg): 1.5,
+- Vitamin K (micrograms): 55,
+- Vitamin B12 (mg): 0,
+- Folate (Vitamin B9) (micrograms): 0,
+- Calcium (mg): 32,
+- Iron (mg): 2.9,
+- Magnesium (mg): 17,
+- Zinc (mg): 1.1
+}]
+
+[Yogurt(1 cup): {
+- Calories: 150,
+- Total Fat (g): 8,
+- Cholesterol (mg): 32,
+- Sodium (mg): 110,
+- Potassium (mg): 380,
+- Carbohydrate (g): 11,
+- Fiber (g): 0,
+- Sugar (g): 11,
+- Protein (g): 8,
+- Vitamin A (mcg): 81,
+- Vitamin C (mg): 1.4,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0.1,
+- Vitamin K (mcg): 0,
+- Vitamin B12 (mcg): 1.4,
+- Folate (Vitamin B9) (mcg): 296,
+- Calcium (mg): 0.1,
+- Iron (mg): 28,
+- Magnesium (mg): 1.7,
+- Zinc (mg): 0.2
+}]
+
+[Cheese(1 oz. cheddar): {
+- Calories: 113,
+- Total Fat (g): 9,
+- Cholesterol (mg): 30,
+- Sodium (mg): 180,
+- Potassium (mg): 28,
+- Carbohydrate (g): 0.4,
+- Fiber (g): 0,
+- Sugar (g): 0.4,
+- Protein (g): 7,
+- Vitamin A (mcg): 284,
+- Vitamin C (mg): 0,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0.3,
+- Vitamin K (mcg): 0.3,
+- Vitamin B12 (mcg): 2.3,
+- Folate (Vitamin B9) (mcg): 0,
+- Calcium (mg): 204,
+- Iron (mg): 0.2,
+- Magnesium (mg): 8,
+- Zinc (mg): 0.7
+}]
+
+[Beef(3 oz. lean): {
+- Calories: 213,
+- Total Fat (g): 8.6,
+- Cholesterol (mg): 77,
+- Sodium (mg): 55,
+- Potassium (mg): 318,
+- Carbohydrate (g): 0,
+- Fiber (g): 0,
+- Sugar (g): 0,
+- Protein (g): 26,
+- Vitamin A (mcg): 0,
+- Vitamin C (mg): 0,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (mcg): 0.7,
+- Vitamin B12 (mcg): 1.7,
+- Folate (Vitamin B9) (mcg): 2.3,
+- Calcium (mg): 2.5,
+- Iron (mg): 4,
+- Magnesium (mg): 2.7,
+- Zinc (mg): 4.8
+}]
+
+[Black beans(1 cup cooked): {
+- Calories: 227,
+- Total Fat (g): 0.9,
+- Cholesterol (mg): 0,
+- Sodium (mg): 1,
+- Potassium (mg): 611,
+- Carbohydrate (g): 40.8,
+- Fiber (g): 15,
+- Sugar (g): 1.3,
+- Protein (g): 15.2,
+- Vitamin A (mcg): 0,
+- Vitamin C (mg): 0,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (mcg): 0.4,
+- Vitamin B12 (mcg): 5,
+- Folate (Vitamin B9) (mcg): 0,
+- Calcium (mg): 256,
+- Iron (mg): 3.6,
+- Magnesium (mg): 120,
+- Zinc (mg): 1.9
+}]
+
+[Bananas(1 medium): {
+- Calories: 105,
+- Total Fat (g): 0.4,
+- Cholesterol (mg): 0,
+- Sodium (mg): 1,
+- Potassium (mg): 422,
+- Carbohydrate (g): 27,
+- Fiber (g): 3.1,
+- Sugar (g): 14.4,
+- Protein (g): 1.3,
+- Vitamin A (mcg): 64,
+- Vitamin C (mg): 10.3,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (mcg): 0.1,
+- Vitamin B12 (mcg): 0,
+- Folate (Vitamin B9) (mcg): 0.6,
+- Calcium (mg): 0,
+- Iron (mg): 6,
+- Magnesium (mg): 0.3,
+- Zinc (mg): 0.2
+}]
+
+[Potatoes(1 medium): {
+- Calories: 163,
+- Total Fat (g): 0.2,
+- Cholesterol (mg): 0,
+- Sodium (mg): 13,
+- Potassium (mg): 897,
+- Carbohydrate (g): 37,
+- Fiber (g): 4.7,
+- Sugar (g): 1.7,
+- Protein (g): 4.3,
+- Vitamin A (mcg): 0,
+- Vitamin C (mg): 19.7,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (mcg): 0.1,
+- Vitamin B12 (mcg): 3.4,
+- Folate (Vitamin B9) (mcg): 0,
+- Calcium (mg): 50,
+- Iron (mg): 1.9,
+- Magnesium (mg): 48,
+- Zinc (mg): 0.6
+}]
+
+[Chickpeas(1 cup cooked): {
+- Calories: 269,
+- Total Fat (g): 4.2,
+- Cholesterol (mg): 0,
+- Sodium (mg): 11,
+- Potassium (mg): 474,
+- Carbohydrate (g): 45,
+- Fiber (g): 12.5,
+- Sugar (g): 8,
+- Protein (g): 14.5,
+- Vitamin A (mcg): 67,
+- Vitamin C (mg): 2,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (mcg): 0.6,
+- Vitamin B12 (mcg): 6.6,
+- Folate (Vitamin B9) (mcg): 0,
+- Calcium (mg): 80,
+- Iron (mg): 4.7,
+- Magnesium (mg): 79,
+- Zinc (mg): 2.5
+}]
+
+[Cashews(1 oz.): {
+- Calories: 157,
+- Total Fat (g): 12,
+- Cholesterol (mg): 0,
+- Sodium (mg): 5,
+- Potassium (mg): 187,
+- Carbohydrate (g): 9,
+- Fiber (g): 0.9,
+- Sugar (g): 1.7,
+- Protein (g): 5.2,
+- Vitamin A (mcg): 0,
+- Vitamin C (mg): 0.1,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0.9,
+- Vitamin K (mcg): 0.3,
+- Vitamin B12 (mcg): 9.8,
+- Folate (Vitamin B9) (mcg): 0,
+- Calcium (mg): 10,
+- Iron (mg): 1.9,
+- Magnesium (mg): 81,
+- Zinc (mg): 1.6
+}]
+
+[Chicken thighs(3 oz. cooked): {
+- Calories: 209,
+- Total Fat (g): 10.9,
+- Cholesterol (mg): 94,
+- Sodium (mg): 88,
+- Potassium (mg): 238,
+- Carbohydrate (g): 0,
+- Fiber (g): 0,
+- Sugar (g): 0,
+- Protein (g): 26,
+- Vitamin A (mcg): 32,
+- Vitamin C (mg): 0.4,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0.3,
+- Vitamin K (mcg): 0,
+- Vitamin B12 (mcg): 1.3,
+- Folate (Vitamin B9) (mcg): 0,
+- Calcium (mg): 14,
+- Iron (mg): 1.3,
+- Magnesium (mg): 21,
+- Zinc (mg): 1
+}]
+
+[Oats(1 cup cooked): {
+- Calories: 154,
+- Total Fat (g): 3.2,
+- Cholesterol (mg): 0,
+- Sodium (mg): 115,
+- Potassium (mg): 163,
+- Carbohydrate (g): 27.3,
+- Fiber (g): 4,
+- Sugar (g): 1.1,
+- Protein (g): 6.5,
+- Vitamin A (mcg): 0,
+- Vitamin C (mg): 0,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (mcg): 0.4,
+- Vitamin B12 (mcg): 1.4,
+- Folate (Vitamin B9) (mcg): 0,
+- Calcium (mg): 21,
+- Iron (mg): 2.1,
+- Magnesium (mg): 63,
+- Zinc (mg): 1.7
+}]
+
+[Quinoa(1 cup cooked): {
+- Calories: 222,
+- Total Fat (g): 3.6,
+- Cholesterol (mg): 0,
+- Sodium (mg): 13,
+- Potassium (mg): 318,
+- Carbohydrate (g): 39,
+- Fiber (g): 5.2,
+- Sugar (g): 1.6,
+- Protein (g): 8.1,
+- Vitamin A (mcg): 9,
+- Vitamin C (mg): 0,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (mcg): 2.8,
+- Vitamin B12 (mcg): 0,
+- Folate (Vitamin B9) (mcg): 0,
+- Calcium (mg): 31,
+- Iron (mg): 2.8,
+- Magnesium (mg): 64,
+- Zinc (mg): 1.3
+}]
+
+[Blueberries(1 cup): {
+- Calories: 84,
+- Total Fat (g): 0.5,
+- Cholesterol (mg): 0,
+- Sodium (mg): 1,
+- Potassium (mg): 114,
+- Carbohydrate (g): 21,
+- Fiber (g): 3.6,
+- Sugar (g): 15,
+- Protein (g): 1.1,
+- Vitamin A (mcg): 80,
+- Vitamin C (mg): 14.4,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 0,
+- Vitamin K (mcg): 0.8,
+- Vitamin B12 (mcg): 0,
+- Folate (Vitamin B9) (mcg): 28.6,
+- Calcium (mg): 0,
+- Iron (mg): 9,
+- Magnesium (mg): 0.4,
+- Zinc (mg): 0.2
+}]
+
+[Brussels sprouts(1 cup): {
+- Calories: 38,
+- Total Fat (g): 0.3,
+- Cholesterol (mg): 0,
+- Sodium (mg): 28,
+- Potassium (mg): 342,
+- Carbohydrate (g): 8,
+- Fiber (g): 3.3,
+- Sugar (g): 1.9,
+- Protein (g): 3,
+- Vitamin A (mcg): 664,
+- Vitamin C (mg): 74.8,
+- Vitamin D (mcg): 0,
+- Vitamin E (mg): 1.5,
+- Vitamin K (mcg): 156,
+- Vitamin B12 (mcg): 0,
+- Folate (Vitamin B9) (mcg): 1.4,
+- Calcium (mg): 20,
+- Iron (mg): 0.4,
+- Magnesium (mg): 37,
+- Zinc (mg): 0.4
+}]
 
 --
 Calories, total fat(g), cholesterol(mg), sodium(mg), potassium(mg), carbohydrate(g), fiber(g), sugar(g), protein(g), Vitamin A(mg), Vitamin C(mg), Vitamin D(mg), Vitamin E(mg), Vitamin K(micro-grams), Vitamin B12(mg), Folate(Vitamin B9)(micro-grams), Calcium(mg), Iron(mg), Magnesium(mg), Zinc(mg)

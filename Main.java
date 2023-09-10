@@ -54,7 +54,27 @@ public class Main {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
     
-        List<Food> foods = parseFoods();
+        List<Food> allFoods = parseFoods();
+
+        System.out.println("\n--- All Foods from Database ---");
+        for(Food food : allFoods) {
+            System.out.println(food.getName());
+        }
+
+        List<Food> preferredFoods = loadPreferredFoods("database\\Preferred.txt", allFoods);
+        System.out.println("\n--- Preferred Foods ---");
+        for(Food food : preferredFoods) {
+            System.out.println(food.getName());
+        }
+        
+        
+        List<Food> mealPlan = createMealPlan(nutrientNeeds, preferredFoods, allFoods);
+
+        if (mealPlan.isEmpty() == true) {
+            printMissingNutrients(nutrientNeeds, mealPlan);
+        } else {
+            printMealPlan(mealPlan);
+        }
     }
 
     public static double calculateBMR(int weight, double height, int age, String gender) {
@@ -132,45 +152,207 @@ public class Main {
         
         try {
             List<String> lines = Files.readAllLines(filePath);
+            Food currentFood = null;
+    
             for (String line : lines) {
-                // Stop reading when we reach the "--" symbol
-                if (line.trim().equals("--")) {
-                    break;
-                }
-
-                if (line.length() < 2) {
+                line = line.trim();
+                
+                if (line.startsWith("[")) {  // This detects the start of a new food
+                    if (currentFood != null) {
+                        foods.add(currentFood);
+                    }
+                    String foodName = line.substring(1, line.length() - 1).trim(); // Remove brackets
+                    currentFood = new Food(foodName);
+                } else if (line.startsWith("-")) {  // This detects a nutrient line
+                    String[] nutrientData = line.substring(2).split(":");  // Remove the dash and split on the colon
+                    if(nutrientData.length != 2) {
+                        System.out.println("Error in line: " + line + ". Malformed nutrient data.");
+                        continue;  // Skip this nutrient data
+                    }
+                    String nutrientName = nutrientData[0].trim().replaceAll("\"", "").replace("-", "").trim(); // Remove quotes and hyphen
+                    double value = 0;
+                    String nutrientValueString = nutrientData[1].trim().replaceAll("[\",]", ""); // Remove quotes and comma, then trim
+                    try {
+                        value = Double.parseDouble(nutrientValueString); // Parse to double
+                    } catch(NumberFormatException e) {
+                        System.out.println("Error parsing nutrient value in line: " + line);
+                        continue;
+                    }
+                    currentFood.addNutrient(nutrientName, value);
+                } else if (line.equals("}]")) {
+                    // End of a food entry, just continue to the next line
                     continue;
+                } else {
+                    // Skipping unrecognized lines
+                    System.out.println("Skipped unrecognized line: " + line);
                 }
-                
-                // Parse the food data
-                String cleaned = line.substring(1, line.length() - 1); // remove brackets
-                String[] parts = cleaned.split(", ");
-                
-                Food food = new Food(parts[0]);
-                for (int i = 1; i < parts.length; i++) {
-                    food.addNutrient(Double.parseDouble(parts[i]));
-                }
-                foods.add(food);
             }
+    
+            // Add the last food to the list, if any
+            if (currentFood != null) {
+                foods.add(currentFood);
+            }
+    
         } catch (IOException e) {
             System.out.println("Error reading the file: " + e.getMessage());
         }
-    
+        
         return foods;
+    }    
+
+    public static List<Food> createMealPlan(Map<String, Double> nutrientNeeds, List<Food> preferredFoods, List<Food> allFoods) {
+        List<Food> mealPlan = new ArrayList<>();
+            
+        // First, attempt to satisfy nutrient needs using preferred foods.
+        while (!isNutrientNeedsSatisfied(nutrientNeeds) && !preferredFoods.isEmpty()) {
+            Food bestFood = getBestOverallFood(nutrientNeeds, preferredFoods);
+            if (bestFood == null) break;
+            mealPlan.add(bestFood);
+            preferredFoods.remove(bestFood); 
+            allFoods.remove(bestFood); // Added this line
+            updateNutrientNeeds(nutrientNeeds, bestFood);
+        }
+            
+        // If nutrient needs are not fully satisfied using preferred foods, use all foods.
+        while (!isNutrientNeedsSatisfied(nutrientNeeds)) {
+            Food bestFood = getBestOverallFood(nutrientNeeds, allFoods);
+            if (bestFood == null) break;
+            mealPlan.add(bestFood);
+            allFoods.remove(bestFood); // Added this line
+            updateNutrientNeeds(nutrientNeeds, bestFood);
+        }
+            
+        return mealPlan;
+    }
+
+    public static boolean isNutrientNeedsSatisfied(Map<String, Double> nutrientNeeds) {
+        for (Double need : nutrientNeeds.values()) {
+            if (need > 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static Food getBestOverallFood(Map<String, Double> nutrientNeeds, List<Food> foods) {
+        Food bestFood = null;
+        double maxScore = -1;
+        
+        for (Food food : foods) {
+            double score = 0;
+            for (String nutrient : nutrientNeeds.keySet()) {
+                double amount = food.getNutrientValue(nutrient);
+                score += Math.min(amount, nutrientNeeds.get(nutrient));
+            }
+    
+            if (score > maxScore) {
+                maxScore = score;
+                bestFood = food;
+            }
+        }
+        
+        return bestFood;
+    }
+
+    public static void updateNutrientNeeds(Map<String, Double> nutrientNeeds, Food food) {
+        for (Map.Entry<String, Double> entry : nutrientNeeds.entrySet()) {
+            String nutrient = entry.getKey();
+            Double need = entry.getValue();
+        
+            double foodAmount = food.getNutrientValue(nutrient);
+            if (foodAmount > 0) {  
+                // Commented out the print statements
+                // System.out.println("For nutrient " + nutrient + ", food provides: " + foodAmount);
+                double newNeed = Math.max(0, need - foodAmount);
+                nutrientNeeds.put(nutrient, newNeed);
+                // System.out.println("Deducted " + foodAmount + " from " + nutrient);
+            }
+        }
+    }
+       
+    public static List<Food> loadPreferredFoods(String filepath, List<Food> allFoods) {
+        List<Food> preferredFoods = new ArrayList<>();
+        
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(filepath));
+            
+            // Assuming the first line contains the preferred foods separated by semi-colons
+            String[] preferredFoodNames = lines.get(0).split(";");
+            
+            System.out.println("Total preferred foods in Preferred.txt: " + preferredFoodNames.length);
+            
+            for (String foodName : preferredFoodNames) {
+                foodName = foodName.trim().toLowerCase().replaceAll("-", " ");  // Convert to lowercase and replace hyphens with spaces
+                boolean found = false;
+                for (Food food : allFoods) {
+                    if (food.getName().trim().toLowerCase().replaceAll("[-.]", " ").equals(foodName)) {
+                        preferredFoods.add(food);
+                        found = true;
+                        System.out.println("Loaded preferred food: " + food.getName());
+                        break;
+                    }
+                }
+                if (!found) {
+                    System.out.println("Warning: Preferred food '" + foodName + "' not found in the main database.");
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading Preferred.txt");
+            e.printStackTrace();
+        }
+        
+        return preferredFoods;
+    }
+
+    public static void printMealPlan(List<Food> mealPlan) {
+        System.out.println("\nYour Meal Plan:");
+        for (int i = 0; i < mealPlan.size(); i++) {
+            System.out.println("Meal " + (i + 1) + ": " + mealPlan.get(i).getName());
+        }
+    }
+
+    public static void printMissingNutrients(Map<String, Double> nutrientNeeds, List<Food> mealPlan) {
+        System.out.println("\nMissing Nutrients:");
+        boolean missingNutrients = false;
+    
+        for (String nutrient : nutrientNeeds.keySet()) {
+            double remainingNeed = nutrientNeeds.get(nutrient);
+            if (remainingNeed > 0) {
+                System.out.println(nutrient + ": " + remainingNeed + " (Missing)");
+                missingNutrients = true;
+            }
+        }
+    
+        if (!missingNutrients) {
+            System.out.println("No missing nutrients.");
+        }
     }    
 }
 
 class Food {
     private String name;
-    private List<Double> nutrients;
+    private Map<String, Double> nutrients;
 
     public Food(String name) {
         this.name = name;
-        this.nutrients = new ArrayList<>();
+        this.nutrients = new HashMap<>();
     }
 
-    public void addNutrient(double value) {
-        nutrients.add(value);
+    public Food(String name, Map<String, Double> nutrients) {
+        this.name = name;
+        this.nutrients = nutrients;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getNutrientValue(String nutrient) {
+        return nutrients.getOrDefault(nutrient, 0.0);
+    }
+
+    public void addNutrient(String nutrientName, double value) {
+        nutrients.put(nutrientName, value);
     }
 
     @Override
