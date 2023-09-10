@@ -1,0 +1,10 @@
+[Carrot(medium-size),
+Broccoli(1 cup),
+Egg(1 large),
+Salmon(3 oz.),
+Bell Peppers(1 medium-sized),
+Spinach(1 cup),
+Bananas(1 medium),
+Chicken thighs(3 oz. cooked),
+Oats(1 cup cooked),
+Quinoa(1 cup cooked)]
